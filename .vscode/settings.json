@@ -1,14 +1,14 @@
 {
-  "editor.formatOnSave": false, // 每次保存自动格式化
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "window.zoomLevel": 0, // 原始缩放比例
-  "editor.codeActionsOnSave": {
-    // 在保存时用eslint规则进行修复
-    "source.fixAll.eslint": false
-  },
-  "eslint.enable": true, //是否开启vscode的eslint
-  "eslint.options": {
-    //指定vscode的eslint所处理的文件的后缀
-    "extensions": [".js", ".vue", ".ts", ".tsx"]
-  }
+    "editor.formatOnSave": false, // 每次保存自动格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "window.zoomLevel": 0, // 原始缩放比例
+    "editor.codeActionsOnSave": {
+        // 在保存时用eslint规则进行修复
+        "source.fixAll.eslint": false
+    },
+    "eslint.enable": true, //是否开启vscode的eslint
+    "eslint.options": {
+        //指定vscode的eslint所处理的文件的后缀
+        "extensions": [".js", ".vue", ".ts", ".tsx"]
+    }
 }

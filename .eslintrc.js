@@ -22,9 +22,11 @@ module.exports = {
         },
     },
     rules: {
-        'prettier/prettier': 1,
+        'prettier/prettier': 'error',
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
-        semi: ['error'],
+        semi: ['error', 'always'],
+        'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     },
 };

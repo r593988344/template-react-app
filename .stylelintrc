@@ -1,0 +1,7 @@
+# @format
+
+{
+    'extends': ['stylelint-config-standard', 'stylelint-config-prettier'],
+    'rules': {'no-descending-specificity': null, 'selector-pseudo-class-no-unknown': null},
+    'plugins': ['stylelint-order'],
+}
