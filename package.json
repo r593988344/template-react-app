@@ -7,7 +7,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx "
     },
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.1",
@@ -49,6 +50,9 @@
         ]
     },
     "lint-staged": {
-        "*.{js,ts,tsx}": "eslint --fix"
+        "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+        "**/*.{js,jsx,tsx,ts,less,md,json}": [
+            "prettier --write"
+        ]
     }
 }
