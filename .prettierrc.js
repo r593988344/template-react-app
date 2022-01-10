@@ -1,14 +1,14 @@
 /** @format */
 
 module.exports = {
-    printWidth: 120,
-    singleQuote: true,
-    trailingComma: 'all',
-    bracketSpacing: false,
-    jsxBracketSameLine: true,
-    arrowParens: 'avoid',
-    insertPragma: true,
-    tabWidth: 4,
-    useTabs: false,
-    semi: true,
+  singleQuote: true, // Use single quotes instead of double quotes.
+  jsxSingleQuote: true, // Use single quotes instead of double quotes.
+  bracketSpacing: true, // { foo: bar }
+  trailingComma: 'all',
+  jsxBracketSameLine: true,
+  arrowParens: 'avoid',
+  insertPragma: true,
+  tabWidth: 2,
+  useTabs: false,
+  semi: true,
 };

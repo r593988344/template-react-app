@@ -1,9 +1,15 @@
 /** @format */
+import { Suspense } from 'react';
+import { Switch } from 'react-router-dom';
 
 function App() {
-    const aa = '';
-    console.log(aa);
-    return <div>App</div>;
+  return (
+    <div>
+      <Suspense fallback={<div>加载中...</div>}>
+        <Switch></Switch>
+      </Suspense>
+    </div>
+  );
 }
 
 export default App;
