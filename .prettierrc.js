@@ -6,9 +6,5 @@ module.exports = {
   bracketSpacing: true, // { foo: bar }
   trailingComma: 'all',
   jsxBracketSameLine: true,
-  arrowParens: 'avoid',
-  insertPragma: true,
-  tabWidth: 2,
-  useTabs: false,
   semi: true,
 };

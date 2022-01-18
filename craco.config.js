@@ -1,12 +1,24 @@
 /** @format */
 
 const { whenProd } = require('@craco/craco');
+const path = require('path');
 const CracoLessPlugin = require('craco-less');
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   webpack: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@models': path.resolve(__dirname, 'src/models'),
+      '@types': path.resolve(__dirname, 'src/types'),
+    },
     plugins: [...whenProd(() => [new BundleAnalyzerPlugin()], [])],
   },
   plugins: [
