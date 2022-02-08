@@ -25,7 +25,7 @@ const routers: Route[] = [
   },
   {
     path: '/',
-    redirect: '/login',
+    redirect: '/home',
     exact: true,
   },
   {

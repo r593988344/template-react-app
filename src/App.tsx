@@ -6,6 +6,7 @@ import { HashRouter } from 'react-router-dom';
 import { Redirect, Route, Switch } from 'react-router';
 import zhCN from 'antd/lib/locale/zh_CN';
 import { ConfigProvider } from 'antd';
+import './App.less';
 
 function App() {
   const renderRoutes = (
