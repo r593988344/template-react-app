@@ -29,6 +29,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-debugger': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react/jsx-uses-react': 'off',

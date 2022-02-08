@@ -1,25 +1,10 @@
 /** @format */
-import DatePicker from 'react-datepicker';
-import { useState } from 'react';
+import React from 'react';
 
-const Index = () => {
+const Index: React.FC = () => {
   const a = 1;
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
   console.log(a);
 
-  return (
-    <div>
-      home
-      <DatePicker
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        // locale='pt-BR'
-        showTimeSelect
-        timeFormat='p'
-        timeIntervals={15}
-        dateFormat='Pp'
-      />
-    </div>
-  );
+  return <div>home</div>;
 };
 export default Index;

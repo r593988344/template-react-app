@@ -1,35 +1,42 @@
 /** @format */
 
 import React, { lazy } from 'react';
-import BasicLayout from '@layout/BasicLayout';
 
 export interface Route {
-  path: string;
+  key?: string;
+  path?: string;
   component?: React.ElementType;
   children?: Route[];
   redirect?: string;
-  push?: boolean;
   exact?: boolean;
+  strict?: boolean;
 }
 
 const routers: Route[] = [
   {
+    path: '/home',
+    component: lazy(() => import('@pages/home/index')),
+    exact: true,
+  },
+  {
+    path: '/login',
+    component: lazy(() => import('@pages/login/index')),
+    exact: true,
+  },
+  {
     path: '/',
-    component: BasicLayout,
-    children: [
-      {
-        path: '/',
-        redirect: '/home',
-        exact: true,
-        children: [
-          {
-            path: '/home',
-            component: lazy(() => import('@pages/home/index')),
-            exact: true,
-          },
-        ],
-      },
-    ],
+    redirect: '/login',
+    exact: true,
+  },
+  {
+    path: '/404',
+    component: lazy(() => import('@pages/notFound')),
+    exact: true,
+  },
+  {
+    path: '*',
+    redirect: '/404',
+    exact: true,
   },
 ];
 
