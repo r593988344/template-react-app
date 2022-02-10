@@ -1,0 +1,117 @@
+.layout {
+  .logo {
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+    font-size: 24px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+  }
+
+  .logoTitle {
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .spiltLine {
+    width: 2px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 11px;
+  }
+
+  .menu,
+  .header {
+    background: #263238;
+  }
+
+  .menu {
+    height: 100%;
+  }
+
+  .header {
+    height: 52px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+  }
+
+  .breadcrumb {
+    height: 52px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .sider {
+    position: relative;
+    padding-top: 32px;
+    background: #263238;
+
+    :global(.ant-menu-submenu-selected) {
+      color: #899399;
+    }
+
+    :global {
+      .ant-menu {
+        color: #899399;
+      }
+      .ant-menu-sub.ant-menu-inline {
+        background: #15232b;
+        color: #899399;
+      }
+
+      .ant-menu-item-selected {
+        color: #fff;
+        width: 100%;
+      }
+
+      .ant-menu-submenu-active .ant-menu-submenu-title {
+        color: #fff;
+      }
+
+      .ant-menu-submenu-arrow {
+        color: #899399;
+      }
+
+      .ant-menu-submenu {
+        &:hover {
+          > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+            color: #fff;
+          }
+        }
+      }
+
+      .ant-menu-light .ant-menu-item:hover {
+        color: #fff;
+      }
+
+      .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+        background: #455a64;
+      }
+
+      .ant-menu-item {
+        margin: 0;
+      }
+
+      .ant-menu-inline .ant-menu-item-selected::after {
+        content: unset;
+        width: 100%;
+      }
+    }
+
+    .trigger {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 32px;
+      width: 100%;
+      border-right: 1px solid #fff;
+      color: #899399;
+      padding-left: 23px;
+    }
+  }
+}

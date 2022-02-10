@@ -10,12 +10,20 @@ export interface Route {
   redirect?: string;
   exact?: boolean;
   strict?: boolean;
+  name?: string;
 }
 
 const routers: Route[] = [
   {
     path: '/home',
+    name: '首页',
     component: lazy(() => import('@pages/home/index')),
+    exact: true,
+  },
+  {
+    path: '/home/detail',
+    name: '首页详情',
+    component: lazy(() => import('@pages/detail/index')),
     exact: true,
   },
   {
